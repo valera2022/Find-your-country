@@ -16,5 +16,5 @@ body{
 
 
 h1{
-    text-shadow: 4px ;
+    text-shadow: 4px 4px 2px rgba(239, 72, 11, 0.467), 3px 2px 2px rgba(157, 236, 11, 0.4)
 }
