@@ -139,7 +139,7 @@ let popUpFormula = document.querySelector("#formula")
     division.append(lab2)
     
    popUpFormula.append(btn4) //issue
-   renderAnotherInput()
+  renderAnotherOutPut()
   
 
 
@@ -182,7 +182,7 @@ let popUpFormula = document.querySelector("#formula")
 }
 
 
-function renderAnotherInput (butt ){
+function renderAnotherOutPut (butt ){
     let form2 = document.querySelector("#formula")
     let paragrh = document.createElement("p")
 
@@ -225,13 +225,18 @@ function renderAnotherInput (butt ){
 
 
 
+function focusEvent (){
+    let textInt = document.querySelector('input[type ="text"] ')
+    textInt.addEventListener("focus", function(event){
+        event.target.style.background = "pink"
+    })
+}
 
 
 
 
 
-
-
+focusEvent()
 
 
 
