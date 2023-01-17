@@ -29,6 +29,7 @@ function getData(userName){
 function submitUserinput(){
     let inputs = document.querySelector("#inputs")
         inputs.addEventListener("submit", function(event) {
+            console.log( event )
             event.stopPropagation()
         let text = document.querySelector("#search")
         let sub = document.querySelector("#sub")
