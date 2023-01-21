@@ -10,10 +10,16 @@ document.addEventListener("DOMContentLoaded", function(){
 function getData(userName){
     fetch (`https://api.nationalize.io/?name=${userName}`, {method: 'GET'}).then(data => data.json())
     .then((resp) => {let objec = resp
+        console.log(objec)
+        let slicedObject = objec.country.slice(0,3)
+        console.log(slicedObject)
+        //debugger;
+
+        
         console.log(objec.country[0].country_id )
         let highestProbalityCountry = objec.country[0].country_id
          secondHighestProbabilityCountry = objec.country[1].country_id
-       // renderUserInput(secondHighestProbabilityCountry)
+       
          thridHighestProbabilityCountry = objec.country[2].country_id
         console.log(secondHighestProbabilityCountry)
         console.log(thridHighestProbabilityCountry)
@@ -192,15 +198,12 @@ function renderAnotherOutPut (butt ){
         
         e.preventDefault()
       
-        //int.setAttribute("value", `${secondHighestProbabilityCountry}`)
+        
         let selected = document.querySelector('input[type ="radio"]:checked');
-        // selected.setAttribute("value",`${secondHighestProbabilityCountry}`)
+        
         
         paragrh.innerText = `WOW! YOU ARE ACTUALLY FROM ${selected.value}` 
-
-        
-        
-        
+           
 
     })
 
@@ -208,15 +211,6 @@ function renderAnotherOutPut (butt ){
 
 
     nDev.append(paragrh)
-//renderAnotherInput()
-
-
-
-
-
-
-
-
 
 
 
@@ -238,20 +232,6 @@ function focusEvent (){
 
 
 focusEvent()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
