@@ -137,7 +137,7 @@ parag.addEventListener("click", function(x){
     division.append(int2)
     division.append(lab2)
     
-   popUpFormula.append(btn4) //issue
+   popUpFormula.append(btn4)
   renderAnotherOutPut()
   
 
