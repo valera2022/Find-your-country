@@ -98,7 +98,11 @@ function renderUserInput (country){
             lab.innerText = country
         }
               
-        
+
+        setAttr(int,secondHighestProbabilityCountry,lab)
+        setAttr(int1,thridHighestProbabilityCountry,lab1)
+        setAttr(int2,"MARS")
+
         //}
     
     
