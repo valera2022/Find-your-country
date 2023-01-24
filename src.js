@@ -4,51 +4,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
    
-    let eachpaisesArray = []
+let eachpaisesArray = []
 
 function getData(userName){
     fetch (`https://api.nationalize.io/?name=${userName}`, {method: 'GET'}).then(data => data.json())
-    .then((resp) => {let objec = resp
-        console.log(objec)
-        let slicedObject = objec.country.slice(0,3)
-        console.log(slicedObject)
-        //debugger;
-
-        slicedObject.forEach( element => {
-            let paises = element.country_id
-            eachpaisesArray.push(paises)
-          
+        .then((resp) => {let objec = resp
+                console.log(objec)
+                let slicedObject = objec.country.slice(0,3)
+                console.log(slicedObject)
             
-           
 
-        }
+            slicedObject.forEach( element => {
+                let paises = element.country_id
+                eachpaisesArray.push(paises)
+            })
 
-        )
-
-        renderUserInput(eachpaisesArray)
-       
-            // console.log(slicedObject[ )
-
-
-        // console.log(objec.country[0].country_id )
-        // let highestProbalityCountry = objec.country[0].country_id
-        //  secondHighestProbabilityCountry = objec.country[1].country_id
-       
-        //  thridHighestProbabilityCountry = objec.country[2].country_id
-        // console.log(secondHighestProbabilityCountry)
-        // console.log(thridHighestProbabilityCountry)
-        
-        // renderUserInput(highestProbalityCountry)//cALL RENDER FUNCTION
-
-        console.log(resp)
-    })
+            renderUserInput(eachpaisesArray)
+        })
 }
-console.log(eachpaisesArray)
-//let highestProbalityCountry = eachpaisesArray[0]
-//console.log(highestProbalityCountry)
-
-debugger
-//getData()
 
 
 
@@ -57,21 +30,16 @@ debugger
 
 function submitUserinput(){
     let inputs = document.querySelector("#inputs")
-        inputs.addEventListener("submit", function(event) {
-            console.log( event )
-            event.stopPropagation()
+    inputs.addEventListener("submit", function(event) {
+        console.log( event )
+        event.stopPropagation()
         let text = document.querySelector("#search")
         let sub = document.querySelector("#sub")
-         event.preventDefault()
+        event.preventDefault()
         console.log(text)
-               getData(text.value)
-    
-    
-    
-    
-    
-    }
-        )
+        getData(text.value)
+      
+    })
 }
 
 submitUserinput()
