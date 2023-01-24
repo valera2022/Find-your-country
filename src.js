@@ -52,7 +52,7 @@ function renderUserInput (country){
     let parag = document.querySelector("#container")
     let secondHighestProbabilityCountry = country[1]
     let thridHighestProbabilityCountry = country[2]
-    console.log(secondHighestProbabilityCountry)
+    
    
     parag.innerText = `You are probably from :` + country[0]
     // let displayedText = parag.innerText
@@ -75,7 +75,7 @@ function renderUserInput (country){
     let lab2 = document.createElement("label")
 parag.addEventListener("click", function(x){
     x.stopPropagation()
-    console.log("are you working?")
+   
   
 let popUpFormula = document.querySelector("#formula")
   
