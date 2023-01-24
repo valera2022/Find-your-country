@@ -82,6 +82,24 @@ function renderUserInput (country){
         let addChoices = false
 
         leg.innerText ="IS YOUR COUNTRY HERE?"
+
+
+
+
+        //
+        function setAttr(int,country,lab){
+            int.setAttribute("type","radio")
+            int.setAttribute("name", "countries")
+            int.setAttribute("value",`${country}`)
+            int.setAttribute("id","interpolated")
+
+
+            lab.setAttribute("for", "interpolated")
+            lab.innerText = country
+        }
+              
+        
+        //}
     
     
         int.setAttribute("type", "radio" )
