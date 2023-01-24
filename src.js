@@ -79,7 +79,7 @@ function renderUserInput (country){
   
         let popUpFormula = document.querySelector("#formula")
     
-        let addChoices = false
+        // let addChoices = false
 
         leg.innerText ="IS YOUR COUNTRY HERE?"
 
@@ -96,13 +96,31 @@ function renderUserInput (country){
 
             lab.setAttribute("for", "interpolated")
             lab.innerText = country
+
+
+            btn4.setAttribute("type", "submit")
+            btn4.innerText = "click"
+    
+            field.append(leg)
+            leg.append(division)
+            popUpFormula.append(field) 
+            division.append(int)
+            division.append(lab)
+            division.append(int1)
+            division.append(lab1)
+            division.append(int2)
+            division.append(lab2)
+        
+            popUpFormula.append(btn4)
+            renderAnotherOutPut()
+
         }
-              
+                
 
         setAttr(int,secondHighestProbabilityCountry,lab)
         setAttr(int1,thridHighestProbabilityCountry,lab1)
-        setAttr(int2,"MARS",lab2)
-
+        setAttr(int2,"Mars",lab2)
+        lab2.innerText = "no"
         //}
     
     
@@ -133,37 +151,37 @@ function renderUserInput (country){
 
     
         // lab2.setAttribute("for", "nointerpolated")
-        // lab2.innerText = "no"
+         
 
     
-        btn4.setAttribute("type", "submit")
-        btn4.innerText = "click"
+        // btn4.setAttribute("type", "submit")
+        // btn4.innerText = "click"
     
-        field.append(leg)
-        leg.append(division)
-        popUpFormula.append(field) 
-        division.append(int)
-        division.append(lab)
-        division.append(int1)
-        division.append(lab1)
-        division.append(int2)
-        division.append(lab2)
+        // field.append(leg)
+        // leg.append(division)
+        // popUpFormula.append(field) 
+        // division.append(int)
+        // division.append(lab)
+        // division.append(int1)
+        // division.append(lab1)
+        // division.append(int2)
+        // division.append(lab2)
         
-        popUpFormula.append(btn4)
-        renderAnotherOutPut()
+        // popUpFormula.append(btn4)
+        // renderAnotherOutPut()
 
     
     
-        addChoices = !addChoices
+        // addChoices = !addChoices
 
 
-        popUpFormula.style.display = "none"
-        if(addChoices){
-            popUpFormula.style.display ="block"
-        }
-        else if (addChoices){
-            console.log("hello")
-        }
+        // popUpFormula.style.display = "none"
+        // if(addChoices){
+        //     popUpFormula.style.display ="block"
+        // }
+        // else if (addChoices){
+        //     console.log("hello")
+        // }
 
     })
 }
