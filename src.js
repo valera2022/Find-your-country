@@ -166,8 +166,6 @@ function renderAnotherOutPut (){
     })
     let paragrh = document.createElement("p")
     let nDev = document.querySelector("#newDiv")
-
-
     nDev.append(paragrh)
 
 
@@ -184,9 +182,6 @@ function focusEvent (){
         event.target.style.background = "pink"
     })
 }
-
-
-
 
 
 focusEvent()
