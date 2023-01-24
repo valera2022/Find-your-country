@@ -3,9 +3,8 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
-    let secondHighestProbabilityCountry
-    let thridHighestProbabilityCountry
-
+   
+    let eachpaisesArray = []
 
 function getData(userName){
     fetch (`https://api.nationalize.io/?name=${userName}`, {method: 'GET'}).then(data => data.json())
@@ -15,23 +14,47 @@ function getData(userName){
         console.log(slicedObject)
         //debugger;
 
-        
-        console.log(objec.country[0].country_id )
-        let highestProbalityCountry = objec.country[0].country_id
-         secondHighestProbabilityCountry = objec.country[1].country_id
+        slicedObject.forEach( element => {
+            let paises = element.country_id
+            eachpaisesArray.push(paises)
+          
+            
+           
+
+        }
+
+        )
+
+        renderUserInput(eachpaisesArray)
        
-         thridHighestProbabilityCountry = objec.country[2].country_id
-        console.log(secondHighestProbabilityCountry)
-        console.log(thridHighestProbabilityCountry)
+            // console.log(slicedObject[ )
+
+
+        // console.log(objec.country[0].country_id )
+        // let highestProbalityCountry = objec.country[0].country_id
+        //  secondHighestProbabilityCountry = objec.country[1].country_id
+       
+        //  thridHighestProbabilityCountry = objec.country[2].country_id
+        // console.log(secondHighestProbabilityCountry)
+        // console.log(thridHighestProbabilityCountry)
         
-        renderUserInput(highestProbalityCountry)//cALL RENDER FUNCTION
+        // renderUserInput(highestProbalityCountry)//cALL RENDER FUNCTION
 
         console.log(resp)
     })
 }
-//debugger
+console.log(eachpaisesArray)
+//let highestProbalityCountry = eachpaisesArray[0]
+//console.log(highestProbalityCountry)
 
+debugger
 //getData()
+
+
+
+
+
+
 function submitUserinput(){
     let inputs = document.querySelector("#inputs")
         inputs.addEventListener("submit", function(event) {
@@ -59,7 +82,11 @@ let int2
 
 function renderUserInput (country){
     let parag = document.querySelector("#container")
-    parag.innerText = `You are probably from :` + country
+    let secondHighestProbabilityCountry = country[1]
+    let thridHighestProbabilityCountry = country[2]
+    console.log(secondHighestProbabilityCountry)
+   
+    parag.innerText = `You are probably from :` + country[0]
     // let displayedText = parag.innerText
     let addChoices = false
 
