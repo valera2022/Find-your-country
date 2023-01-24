@@ -112,11 +112,11 @@ function renderUserInput (country){
             division.append(lab2)
         
             popUpFormula.append(btn4)
-            renderAnotherOutPut()
+            
 
         }
                 
-
+   
         setAttr(int,secondHighestProbabilityCountry,lab)
         setAttr(int1,thridHighestProbabilityCountry,lab1)
         setAttr(int2,"Mars",lab2)
@@ -151,7 +151,12 @@ function renderUserInput (country){
             console.log("hello")
         }
 
+   
     })
+
+
+    renderAnotherOutPut()
+
 }
 
 
