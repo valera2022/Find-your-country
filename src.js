@@ -101,39 +101,39 @@ function renderUserInput (country){
 
         setAttr(int,secondHighestProbabilityCountry,lab)
         setAttr(int1,thridHighestProbabilityCountry,lab1)
-        setAttr(int2,"MARS")
+        setAttr(int2,"MARS",lab2)
 
         //}
     
     
-        int.setAttribute("type", "radio" )
-        int.setAttribute("name", "countries" )
-        int.setAttribute("value", `${secondHighestProbabilityCountry}`)
-        int.setAttribute("id", "interpolated")
+        // int.setAttribute("type", "radio" )
+        // int.setAttribute("name", "countries" )
+        // int.setAttribute("value", `${secondHighestProbabilityCountry}`)
+        // int.setAttribute("id", "interpolated")
     
     
-        lab.setAttribute("for", "interpolated")
-        lab.innerText = secondHighestProbabilityCountry
+        // lab.setAttribute("for", "interpolated")
+        // lab.innerText = secondHighestProbabilityCountry
     
     
-        int1.setAttribute("type", "radio" )
-        int1.setAttribute("name", "countries" )
-        int1.setAttribute("value", `${thridHighestProbabilityCountry}`)
-        int1.setAttribute("id", "interpolated")
+        // int1.setAttribute("type", "radio" )
+        // int1.setAttribute("name", "countries" )
+        // int1.setAttribute("value", `${thridHighestProbabilityCountry}`)
+        // int1.setAttribute("id", "interpolated")
 
     
-        lab1.setAttribute("for", "interpolated")
-        lab1.innerText =  thridHighestProbabilityCountry
+        // lab1.setAttribute("for", "interpolated")
+        // lab1.innerText =  thridHighestProbabilityCountry
     
 
-        int2.setAttribute("type", "radio" )   
-        int2.setAttribute("name", "countries" )
-        int2.setAttribute("value", "MARS")
-        int2.setAttribute("id", "nointerpolated")
+        // int2.setAttribute("type", "radio" )   
+        // int2.setAttribute("name", "countries" )
+        // int2.setAttribute("value", "MARS")
+        // int2.setAttribute("id", "nointerpolated")
 
     
-        lab2.setAttribute("for", "nointerpolated")
-        lab2.innerText = "no"
+        // lab2.setAttribute("for", "nointerpolated")
+        // lab2.innerText = "no"
 
     
         btn4.setAttribute("type", "submit")
