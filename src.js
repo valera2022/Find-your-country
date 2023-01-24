@@ -121,67 +121,35 @@ function renderUserInput (country){
         setAttr(int1,thridHighestProbabilityCountry,lab1)
         setAttr(int2,"Mars",lab2)
         lab2.innerText = "no"
-        //}
+        
     
     
-        // int.setAttribute("type", "radio" )
-        // int.setAttribute("name", "countries" )
-        // int.setAttribute("value", `${secondHighestProbabilityCountry}`)
-        // int.setAttribute("id", "interpolated")
-    
-    
-        // lab.setAttribute("for", "interpolated")
-        // lab.innerText = secondHighestProbabilityCountry
-    
-    
-        // int1.setAttribute("type", "radio" )
-        // int1.setAttribute("name", "countries" )
-        // int1.setAttribute("value", `${thridHighestProbabilityCountry}`)
-        // int1.setAttribute("id", "interpolated")
-
-    
-        // lab1.setAttribute("for", "interpolated")
-        // lab1.innerText =  thridHighestProbabilityCountry
-    
-
-        // int2.setAttribute("type", "radio" )   
-        // int2.setAttribute("name", "countries" )
-        // int2.setAttribute("value", "MARS")
-        // int2.setAttribute("id", "nointerpolated")
-
-    
-        // lab2.setAttribute("for", "nointerpolated")
+       
+         lab.innerText = secondHighestProbabilityCountry
+         lab1.innerText =  thridHighestProbabilityCountry
+          
          
 
     
-        // btn4.setAttribute("type", "submit")
-        // btn4.innerText = "click"
-    
-        // field.append(leg)
-        // leg.append(division)
-        // popUpFormula.append(field) 
-        // division.append(int)
-        // division.append(lab)
-        // division.append(int1)
-        // division.append(lab1)
-        // division.append(int2)
-        // division.append(lab2)
         
-        // popUpFormula.append(btn4)
-        // renderAnotherOutPut()
+         btn4.innerText = "click"
+    
+        
+        
+        
 
     
     
-        // addChoices = !addChoices
+         addChoices = !addChoices
 
 
-        // popUpFormula.style.display = "none"
-        // if(addChoices){
-        //     popUpFormula.style.display ="block"
-        // }
-        // else if (addChoices){
-        //     console.log("hello")
-        // }
+        popUpFormula.style.display = "none"
+        if(addChoices){
+            popUpFormula.style.display ="block"
+        }
+        else if (addChoices){
+            console.log("hello")
+        }
 
     })
 }
