@@ -73,87 +73,83 @@ function renderUserInput (country){
     let btn4 = document.createElement("button")
     let lab2 = document.createElement("label")
 
- parag.addEventListener("click", function(x){
-    x.stopPropagation()
+    parag.addEventListener("click", function(x){
+        x.stopPropagation()
    
   
-    let popUpFormula = document.querySelector("#formula")
-  
-    let addChoices = false
-
-    leg.innerText ="IS YOUR COUNTRY HERE?"
- 
-   
-    int.setAttribute("type", "radio" )
-    int.setAttribute("name", "countries" )
-    int.setAttribute("value", `${secondHighestProbabilityCountry}`)
-    int.setAttribute("id", "interpolated")
-  
- 
-    lab.setAttribute("for", "interpolated")
-    lab.innerText = secondHighestProbabilityCountry
-  
-  
-    int1.setAttribute("type", "radio" )
-    int1.setAttribute("name", "countries" )
-    int1.setAttribute("value", `${thridHighestProbabilityCountry}`)
-    int1.setAttribute("id", "interpolated")
-
-   
-    lab1.setAttribute("for", "interpolated")
-    lab1.innerText =  thridHighestProbabilityCountry
-   
-
-    int2.setAttribute("type", "radio" )   
-    int2.setAttribute("name", "countries" )
-    int2.setAttribute("value", "MARS")
-    int2.setAttribute("id", "nointerpolated")
-
-  
-    lab2.setAttribute("for", "nointerpolated")
-    lab2.innerText = "no"
-
-   
-    btn4.setAttribute("type", "submit")
-    btn4.innerText = "click"
-   
-    field.append(leg)
-    leg.append(division)
-    popUpFormula.append(field) 
-    division.append(int)
-    division.append(lab)
-    division.append(int1)
-    division.append(lab1)
-    division.append(int2)
-    division.append(lab2)
+        let popUpFormula = document.querySelector("#formula")
     
-   popUpFormula.append(btn4)
-   renderAnotherOutPut()
+        let addChoices = false
 
-  
-  
-   addChoices = !addChoices
+        leg.innerText ="IS YOUR COUNTRY HERE?"
+    
+    
+        int.setAttribute("type", "radio" )
+        int.setAttribute("name", "countries" )
+        int.setAttribute("value", `${secondHighestProbabilityCountry}`)
+        int.setAttribute("id", "interpolated")
+    
+    
+        lab.setAttribute("for", "interpolated")
+        lab.innerText = secondHighestProbabilityCountry
+    
+    
+        int1.setAttribute("type", "radio" )
+        int1.setAttribute("name", "countries" )
+        int1.setAttribute("value", `${thridHighestProbabilityCountry}`)
+        int1.setAttribute("id", "interpolated")
+
+    
+        lab1.setAttribute("for", "interpolated")
+        lab1.innerText =  thridHighestProbabilityCountry
+    
+
+        int2.setAttribute("type", "radio" )   
+        int2.setAttribute("name", "countries" )
+        int2.setAttribute("value", "MARS")
+        int2.setAttribute("id", "nointerpolated")
+
+    
+        lab2.setAttribute("for", "nointerpolated")
+        lab2.innerText = "no"
+
+    
+        btn4.setAttribute("type", "submit")
+        btn4.innerText = "click"
+    
+        field.append(leg)
+        leg.append(division)
+        popUpFormula.append(field) 
+        division.append(int)
+        division.append(lab)
+        division.append(int1)
+        division.append(lab1)
+        division.append(int2)
+        division.append(lab2)
+        
+        popUpFormula.append(btn4)
+        renderAnotherOutPut()
+
+    
+    
+        addChoices = !addChoices
 
 
-   popUpFormula.style.display = "none"
-   if(addChoices){
-   popUpFormula.style.display ="block"
-   }
-   else if (addChoices){
-   console.log("hello")
-   }
+        popUpFormula.style.display = "none"
+        if(addChoices){
+            popUpFormula.style.display ="block"
+        }
+        else if (addChoices){
+            console.log("hello")
+        }
 
-
-
-
-  
-  })
+    })
 }
 
 
 function renderAnotherOutPut (){
     let form2 = document.querySelector("#formula")
-    let paragrh = document.createElement("p")
+    
 
     form2.addEventListener("submit", function(e){
         e.stopPropagation()
@@ -168,7 +164,7 @@ function renderAnotherOutPut (){
            
 
     })
-
+    let paragrh = document.createElement("p")
     let nDev = document.querySelector("#newDiv")
 
 
