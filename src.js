@@ -56,8 +56,7 @@ function renderUserInput (country){
    
     parag.innerText = `You are probably from :` + country[0]
     // let displayedText = parag.innerText
-    let addChoices = false
-
+    
 
    
     let field = document.createElement("fieldset")
@@ -74,13 +73,13 @@ function renderUserInput (country){
     let btn4 = document.createElement("button")
     let lab2 = document.createElement("label")
 
-parag.addEventListener("click", function(x){
+ parag.addEventListener("click", function(x){
     x.stopPropagation()
    
   
     let popUpFormula = document.querySelector("#formula")
   
-
+    let addChoices = false
 
     leg.innerText ="IS YOUR COUNTRY HERE?"
  
@@ -95,9 +94,6 @@ parag.addEventListener("click", function(x){
     lab.innerText = secondHighestProbabilityCountry
   
   
-  
-
-  
     int1.setAttribute("type", "radio" )
     int1.setAttribute("name", "countries" )
     int1.setAttribute("value", `${thridHighestProbabilityCountry}`)
@@ -108,8 +104,6 @@ parag.addEventListener("click", function(x){
     lab1.innerText =  thridHighestProbabilityCountry
    
 
-    
-   
     int2.setAttribute("type", "radio" )   
     int2.setAttribute("name", "countries" )
     int2.setAttribute("value", "MARS")
@@ -120,10 +114,6 @@ parag.addEventListener("click", function(x){
     lab2.innerText = "no"
 
    
-
-   
-
-  
     btn4.setAttribute("type", "submit")
     btn4.innerText = "click"
    
@@ -138,50 +128,30 @@ parag.addEventListener("click", function(x){
     division.append(lab2)
     
    popUpFormula.append(btn4)
-  renderAnotherOutPut()
+   renderAnotherOutPut()
+
   
-
-
-
-
-
-
-
-
-
+  
    addChoices = !addChoices
+
+
    popUpFormula.style.display = "none"
    if(addChoices){
-    popUpFormula.style.display ="block"
- }
+   popUpFormula.style.display ="block"
+   }
    else if (addChoices){
-    console.log("hello")
+   console.log("hello")
    }
 
 
 
 
   
- }
-)
-
-
-
-
-
-
-  
- 
-  
- 
-
- 
-
-
+  })
 }
 
 
-function renderAnotherOutPut (butt ){
+function renderAnotherOutPut (){
     let form2 = document.querySelector("#formula")
     let paragrh = document.createElement("p")
 
