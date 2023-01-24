@@ -149,7 +149,7 @@ function renderUserInput (country){
 
 function renderAnotherOutPut (){
     let form2 = document.querySelector("#formula")
-    
+  
 
     form2.addEventListener("submit", function(e){
         e.stopPropagation()
