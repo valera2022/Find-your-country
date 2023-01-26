@@ -3,6 +3,23 @@
 document.addEventListener("DOMContentLoaded", function(){
 
 
+
+function submitUserinput(){
+    let inputs = document.querySelector("#inputs")
+    inputs.addEventListener("submit", function(event) {
+            console.log( event )
+            event.stopPropagation()
+            let text = document.querySelector("#search")
+            let sub = document.querySelector("#sub")
+            event.preventDefault()
+            console.log(text)
+            getData(text.value)
+          
+     })
+}
+submitUserinput()
+
+
    
 let eachpaisesArray = []
 
@@ -14,10 +31,10 @@ function getData(userName){
                 console.log(slicedObject)
             
 
-            slicedObject.forEach( element => {
-                let paises = element.country_id
-                eachpaisesArray.push(paises)
-            })
+                slicedObject.forEach( element => {
+                    let paises = element.country_id
+                    eachpaisesArray.push(paises)
+                })
 
             renderUserInput(eachpaisesArray)
         })
@@ -25,24 +42,6 @@ function getData(userName){
 
 
 
-
-
-
-function submitUserinput(){
-    let inputs = document.querySelector("#inputs")
-    inputs.addEventListener("submit", function(event) {
-        console.log( event )
-        event.stopPropagation()
-        let text = document.querySelector("#search")
-        let sub = document.querySelector("#sub")
-        event.preventDefault()
-        console.log(text)
-        getData(text.value)
-      
-    })
-}
-
-submitUserinput()
 
 let int
 let int1
@@ -79,7 +78,7 @@ function renderUserInput (country){
   
         let popUpFormula = document.querySelector("#formula")
     
-        // let addChoices = false
+         
 
         leg.innerText ="IS YOUR COUNTRY HERE?"
 
@@ -125,22 +124,14 @@ function renderUserInput (country){
     
     
        
-         lab.innerText = secondHighestProbabilityCountry
-         lab1.innerText =  thridHighestProbabilityCountry
-          
-         
-
-    
-        
-         btn4.innerText = "click"
-    
+        lab.innerText = secondHighestProbabilityCountry
+        lab1.innerText =  thridHighestProbabilityCountry
+        btn4.innerText = "click"
         
         
         
-
     
-    
-         addChoices = !addChoices
+        addChoices = !addChoices
 
 
         popUpFormula.style.display = "none"
@@ -155,7 +146,7 @@ function renderUserInput (country){
     })
 
 
-    renderAnotherOutPut()
+     renderAnotherOutPut()
 
 }
 
@@ -184,8 +175,6 @@ function renderAnotherOutPut (){
 
 
 }
-
-
 
 
 
