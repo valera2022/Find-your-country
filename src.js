@@ -1,5 +1,4 @@
-// let URL = "https://api.nationalize.io/?name=michael"
-//getData(URL)
+
 document.addEventListener("DOMContentLoaded", function(){
 
 
