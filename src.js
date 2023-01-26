@@ -53,7 +53,7 @@ function renderUserInput (country){
     
    
     parag.innerText = `You are probably from :` + country[0]
-    // let displayedText = parag.innerText
+   
     
 
    
