@@ -3,7 +3,7 @@
 
  # Where to find it
 
- Go to : https://valera2022.github.io/Find-your-country/
+ Go to : https://github.com/valera2022/Find-your-country
 
  # Usage
 
