@@ -30,7 +30,7 @@ function getData(userName){
                 console.log(slicedObject)
             
 
-                slicedObject.forEach( element => {
+                slicedObject.map( element => {
                     let paises = element.country_id
                     eachpaisesArray.push(paises)
                 })
@@ -130,16 +130,16 @@ function renderUserInput (country){
         
         
     
-        addChoices = !addChoices
+        // addChoices = !addChoices
 
 
-        popUpFormula.style.display = "none"
-        if(addChoices){
-            popUpFormula.style.display ="block"
-        }
-        else if (addChoices){
-            console.log("hello")
-        }
+        // popUpFormula.style.display = "none"
+        // if(addChoices){
+        //     popUpFormula.style.display ="block"
+        // }
+        // else if (addChoices){
+        //     console.log("hello")
+        // }
 
    
     })
