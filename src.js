@@ -84,7 +84,7 @@ function renderUserInput (country){
 
 
 
-        //
+        
         function setAttr(int,country,lab){
             int.setAttribute("type","radio")
             int.setAttribute("name", "countries")
@@ -129,17 +129,6 @@ function renderUserInput (country){
         
         
         
-    
-        // addChoices = !addChoices
-
-
-        // popUpFormula.style.display = "none"
-        // if(addChoices){
-        //     popUpFormula.style.display ="block"
-        // }
-        // else if (addChoices){
-        //     console.log("hello")
-        // }
 
    
     })
