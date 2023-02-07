@@ -9,7 +9,6 @@ function submitUserinput(){
             console.log( event )
             event.stopPropagation()
             let text = document.querySelector("#search")
-            let sub = document.querySelector("#sub")
             event.preventDefault()
             console.log(text)
             getData(text.value)
@@ -23,14 +22,14 @@ submitUserinput()
 let eachpaisesArray = []
 
 function getData(userName){
-    fetch (`https://api.nationalize.io/?name=${userName}`, {method: 'GET'}).then(data => data.json())
-        .then((resp) => {let objec = resp
+    fetch (`https://api.nationalize.io/?name=${userName}`, {method: 'GET'}).then(resp => resp.json())
+        .then((data) => {let objec = data
                 console.log(objec)
-                let slicedObject = objec.country.slice(0,3)
-                console.log(slicedObject)
+                let slicedArrayOfObject = objec.country.slice(0,3)
+                console.log(slicedArrayOfObject)
             
 
-                slicedObject.map( element => {
+                slicedArrayOfObject.map( element => {
                     let paises = element.country_id
                     eachpaisesArray.push(paises)
                 })
